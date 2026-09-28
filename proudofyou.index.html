@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Proud of You ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Floating hearts background */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(45deg);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(45deg) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(45deg) scale(1);
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+            position: relative;
+            z-index: 10;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .crown {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 42px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .message {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .message strong {
+            color: #764ba2;
+            font-size: 20px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffd1dc 0%, #ffc0cb 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+            font-size: 18px;
+        }
+
+        .signature {
+            margin-top: 40px;
+            font-size: 20px;
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .hearts-row {
+            font-size: 30px;
+            margin: 20px 0;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #b90606 0%, #f30202 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 25px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .message {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating hearts -->
+    <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="heart" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="heart" style="left: 40%; animation-delay: 0.5s;"></div>
+    <div class="heart" style="left: 50%; animation-delay: 1.5s;"></div>
+    <div class="heart" style="left: 60%; animation-delay: 2.5s;"></div>
+    <div class="heart" style="left: 70%; animation-delay: 3s;"></div>
+    <div class="heart" style="left: 80%; animation-delay: 3.5s;"></div>
+    <div class="heart" style="left: 90%; animation-delay: 4s;"></div>
+
+    <div class="container">
+        <div class="crown">👑</div>
+        <h1>I'm So Proud of You!</h1>
+        
+        <div class="hearts-row">💕 ✨ 💖 ✨ 💕</div>
+        
+        <div class="message">
+            <p><strong>Strong women,</strong></p>
+            <p>Aku hanya ingin kamu tahu betapa <strong>bangganya aku</strong> melihat setiap pencapaian yang kamu raih.</p>
+        </div>
+
+        <div class="highlight">
+            "Kamu adalah inspirasiku, motivasiku, dan alasan aku percaya bahwa hal-hal indah itu nyata. Setiap langkah yang kamu ambil membuatku semakin jatuh hati kepadamu."
+        </div>
+
+        <div class="message">
+            <p>Kerja kerasmu, semangatmu, dan keteguhanmu membuat aku kagum setiap hari. 🌟</p>
+            <p>Tidak peduli seberapa besar atau kecil pencapaianmu, bagiku itu semua <strong>luar biasa</strong> karena itu datang darimu.</p>
+            <p style="margin-top: 20px;">Teruslah bersinar, Nadila Sri Rahayu. Aku akan selalu ada di untukmu, mendukungmu, dan merayakan setiap kemenanganmu. ❤️</p>
+        </div>
+
+        <div class="hearts-row">💝 💗 💝</div>
+
+        <button class="button" onclick="showLove()">Klik untuk kejutan ❤️</button>
+
+        <div class="signature">
+            <p>Dengan cinta dan kebanggaan,</p>
+            <p>❤️ Dari seseorang yang ingin melihat mu mencapai semua impianmu ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        function showLove() {
+            alert("✨💖 I STILL LOVE YOU AND I'M SO PROUD OF YOU! 💖✨\n\nKamu adalah yang terbaik dan kamu adalah dunia ku! 🌟");
+            
+            // Create confetti effect
+            for (let i = 0; i < 50; i++) {
+                createConfetti();
+            }
+        }
+
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.innerHTML = ['❤️', '💕', '💖', '✨', '🌟', '💝'][Math.floor(Math.random() * 6)];
+            confetti.style.position = 'fixed';
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = '-50px';
+            confetti.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            confetti.style.zIndex = '1000';
+            confetti.style.pointerEvents = 'none';
+            confetti.style.transition = 'all 3s ease-in';
+            
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.style.top = '100vh';
+                confetti.style.transform = 'rotate(360deg)';
+                confetti.style.opacity = '0';
+            }, 10);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
